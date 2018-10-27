@@ -1,0 +1,11 @@
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.csprojAssemblyReference.cache
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.Properties.Resources.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.csproj.GenerateResource.cache
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.csproj.CoreCompileInputs.cache
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\bin\Debug\Planner_Test.exe.config
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\bin\Debug\Planner_Test.exe
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\bin\Debug\Planner_Test.pdb
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.Hello.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.exe
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.pdb
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.UserControl1.resources
