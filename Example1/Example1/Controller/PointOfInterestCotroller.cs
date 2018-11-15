@@ -17,7 +17,7 @@ namespace Example1.Controller
             var city = cities.FirstOrDefault(c => c.Id == id);
             return Ok(city.PointsOfInterest);
         }
-        [HttpGet("{cityid}/pointofinterest/{pointid}")]
+        [HttpGet("{cityid}/pointofinterest/{pointid}",Name = "GetPointOfInterestByPointId")]
         public IActionResult GetPointsOfInterest(int cityid, int pointid)
         {
             var cities = CitiesStore.Instance.Cities;
@@ -27,35 +27,40 @@ namespace Example1.Controller
             return Ok(point);
         }
 
+        [HttpDelete("{cityid}/pointofinterest/{pointid}")]
+        public IActionResult DeletePointOfInterest(int cityid, int pointid)
+        {
+            //----->링큐사용
+            CityDto city = CitiesStore.Instance.Cities.FirstOrDefault(c => c.Id == cityid);
+            if (city == null) return NotFound();
+            PointOfInterestDto point = city.PointsOfInterest.FirstOrDefault(p => p.Id == pointid);
+            if (point == null) return NotFound();
+
+            city.PointsOfInterest.Remove(point);            //list에서 지워주기만 하면됨.
+
+            return NoContent();
+        }
+
         [HttpPost ("{cityid}/pointofinterest")]
         public IActionResult CreatePointOfInterest(int cityid , 
             [FromBody]PointOfInterestForCreate pointOfInterestForCreate)
         {
-            string result = $@"[Name = {pointOfInterestForCreate.Name},
-                    Description = {pointOfInterestForCreate.Description}]";
-            if (pointOfInterestForCreate == null) return BadRequest();
+            #region
+            //string result = $@"[Name = {pointOfInterestForCreate.Name},Description = {pointOfInterestForCreate.Description}]";
+
+            //오류처리
+            if (pointOfInterestForCreate == null) return BadRequest("Data is Null");
+            if (!ModelState.IsValid) return BadRequest();                  //Dto에 있는 required도 다 만족할때 true나옴.
 
             //city 검색
-            List<CityDto> cities  = CitiesStore.Instance.Cities;
-
-            CityDto city = null;
-            foreach(var c in cities)
-            {
-                if (c.Id== cityid)
-                {
-                    city = c;
-                }
-            }
+            //----->링큐사용
+            CityDto city = CitiesStore.Instance.Cities.FirstOrDefault(c => c.Id == cityid);
             if (city == null) return NotFound();
 
-            //
             var points = city.PointsOfInterest;
-            //find id
-            int maxId = 0;
-            foreach (var p in points)
-            {
-                if (p.Id > maxId) maxId = p.Id; 
-            }
+            //---->링큐이용
+            //int maxId = CitiesStore.Instance.Cities.SelectMany(c => c.PointsOfInterest).Max(p => p.Id);
+            int maxId = city.PointsOfInterest.Max(p => p.Id);
             //insert points
             var createdPointOfInterest = new PointOfInterestDto()
             {
@@ -66,9 +71,13 @@ namespace Example1.Controller
 
             points.Add(createdPointOfInterest);
 
+            #endregion              //코드접기사용!
+            return CreatedAtRoute("GetPointOfInterestByPointId",
+                                    new { cityid = cityid , pointid = createdPointOfInterest.Id},
+                                    createdPointOfInterest);
+            //return Ok();
+        }
 
-            return Ok(result);
-        } 
-
+        
     }
 }
