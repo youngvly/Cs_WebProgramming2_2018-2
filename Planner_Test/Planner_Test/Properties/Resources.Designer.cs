@@ -63,6 +63,16 @@ namespace Planner_Test.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap noun_add_1498447_사본 {
+            get {
+                object obj = ResourceManager.GetObject("noun_add_1498447 사본", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap noun_calender4 {
             get {
                 object obj = ResourceManager.GetObject("noun_calender4", resourceCulture);
@@ -76,6 +86,26 @@ namespace Planner_Test.Properties {
         internal static System.Drawing.Bitmap noun_Check_18137011 {
             get {
                 object obj = ResourceManager.GetObject("noun_Check_18137011", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap noun_Close_1590727_사본 {
+            get {
+                object obj = ResourceManager.GetObject("noun_Close_1590727 사본", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap noun_logout_1155288_사본 {
+            get {
+                object obj = ResourceManager.GetObject("noun_logout_1155288 사본", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

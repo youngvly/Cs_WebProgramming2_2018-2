@@ -16,7 +16,8 @@ namespace Planner_Test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Hello());
+            //Application.Run(new Hello());
+            Application.Run(new loginForms());
         }
     }
 }

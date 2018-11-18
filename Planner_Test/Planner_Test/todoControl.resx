@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="noun_main_19020231" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_main_19020231.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noun_Meeting_1580032" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_Meeting_1580032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noun_planner_1784243" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_planner_1784243.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noun_Check_18137011" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_Check_1813701.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noun_Close_1590727 사본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_Close_1590727 사본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noun_logout_1155288 사본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_logout_1155288 사본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noun_calender4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_calender4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noun_add_1498447 사본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noun_add_1498447 사본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

@@ -9,3 +9,9 @@ C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj
 C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.exe
 C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.pdb
 C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.UserControl1.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.todoControl.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.monthControl.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.loginForms.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.makeAPControl.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.signupControls.resources
+C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.PlanForm.resources
