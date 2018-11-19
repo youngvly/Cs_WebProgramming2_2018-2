@@ -20,13 +20,13 @@ namespace Planner_Test
         int month = int.Parse(DateTime.Now.ToString("MM"));
         int day = int.Parse(DateTime.Now.ToString("dd"));
         int startDateindex = 0;
-        MakeConnection connection;
+        PlanDBModel pdm;
         Users user = new Users();
 
         public monthControl(Users u)
         {
             InitializeComponent();
-            connection = new MakeConnection(u);
+            pdm = new MakeConnection(u).makePlanDBModel();
             user = u;
             drawdate();
             drawPlan();
@@ -99,7 +99,7 @@ namespace Planner_Test
                 d.Text = "";
             }
 
-            DataTable dt = connection.SelectPlanByMonth(month);
+            DataTable dt = pdm.SelectPlanByMonth(month);
             foreach (DataRow plan in dt.Rows)
             {
                 string title = plan["title"].ToString();

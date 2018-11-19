@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Callender.cs" />
     <Compile Include="DBControl\MakeConnection.cs" />
+    <Compile Include="DBControl\PlanDBModel.cs" />
     <Compile Include="domain\Plan.cs" />
     <Compile Include="domain\Users.cs" />
     <Compile Include="Hello.cs">

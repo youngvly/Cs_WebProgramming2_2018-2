@@ -16,13 +16,13 @@ namespace Planner_Test
     {
         private int[] planid;
         private List<Plan> planlist = new List<Plan>();
-        private MakeConnection mc;
+        private PlanDBModel pdm;
         private int pageIndex = 0;
         public PlanShow(Users user,int[] planid)
         {
             InitializeComponent();
-            mc = new MakeConnection(user);
-
+            pdm = new MakeConnection(user).makePlanDBModel();
+            this.planid = planid;
             comboBox1.Items.Add("예약");
             comboBox1.Items.Add("과제");
             comboBox1.Items.Add("여행");
@@ -31,7 +31,7 @@ namespace Planner_Test
 
             foreach (var pid in planid)
             {
-                planlist.Add(mc.SelectPlanByPlanid(pid));
+                planlist.Add(pdm.SelectPlanByPlanid(pid));
             }
             planshow_action(pageIndex);
         }
@@ -61,13 +61,21 @@ namespace Planner_Test
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            mc.editPlan(planlist.ElementAt(pageIndex));
+            Plan editplan = new Plan();
+            editplan.title = title.Text;
+            editplan.contents = contents.Text;
+            editplan.subject = comboBox1.Text;
+            editplan.startDate = startDate.Value;
+            editplan.endDate = endDate.Value;
+            editplan.planID = planid[pageIndex];
+
+            pdm.editPlan(editplan);
             this.Close();
         }
 
         private void dropButton_Click(object sender, EventArgs e)
         {
-            mc.dropPlan(planlist.ElementAt(pageIndex));
+            pdm.dropPlan(planlist.ElementAt(pageIndex));
             this.Close();
         }
 

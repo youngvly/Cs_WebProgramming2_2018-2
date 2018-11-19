@@ -15,10 +15,10 @@ namespace Planner_Test
     public partial class PlanForm : Form
     {
         private Plan plan = new Plan();
-        private MakeConnection mc;
+        private PlanDBModel pdm;
         public PlanForm(Users user)
         {
-            mc = new MakeConnection(user);
+            pdm = new MakeConnection(user).makePlanDBModel();
             InitializeComponent();
 
             comboBox1.Items.Add("예약");
@@ -61,7 +61,7 @@ namespace Planner_Test
                 plan.startDate = dateTimePicker1.Value;
                 plan.endDate = dateTimePicker2.Value;
 
-                mc.AddPlan(plan);
+                pdm.AddPlan(plan);
                 this.Close();
             }
             
