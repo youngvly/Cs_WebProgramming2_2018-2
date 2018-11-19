@@ -14,4 +14,3 @@ C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj
 C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.loginForms.resources
 C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.makeAPControl.resources
 C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.signupControls.resources
-C:\Users\young\Desktop\4학년2학기\고급웹프\Planner_Test\Planner_Test\obj\Debug\Planner_Test.PlanForm.resources

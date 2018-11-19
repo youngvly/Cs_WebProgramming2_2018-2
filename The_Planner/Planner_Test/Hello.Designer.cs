@@ -1,4 +1,6 @@
-﻿namespace Planner_Test
+﻿using Planner_Test.domain;
+
+namespace Planner_Test
 {
     partial class Hello
     {
@@ -26,7 +28,7 @@
         /// 디자이너 지원에 필요한 메서드입니다. 
         /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(Users user)
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
@@ -41,7 +43,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.mainUserControl = new Planner_Test.UserControl1();
             this.todoControl1 = new Planner_Test.todoControl();
-            this.monthControl1 = new Planner_Test.monthControl();
+            this.monthControl1 = new Planner_Test.monthControl(user);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();

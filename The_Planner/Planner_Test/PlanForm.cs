@@ -20,6 +20,12 @@ namespace Planner_Test
         {
             mc = new MakeConnection(user);
             InitializeComponent();
+
+            comboBox1.Items.Add("예약");
+            comboBox1.Items.Add("과제");
+            comboBox1.Items.Add("여행");
+            comboBox1.Items.Add("모임");
+            comboBox1.Items.Add("기타");
         }
 
         private bool checkDate()
@@ -59,6 +65,11 @@ namespace Planner_Test
                 this.Close();
             }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

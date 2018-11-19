@@ -31,6 +31,30 @@ namespace Planner_Test.DBControl
 
             return dt;
         }
+
+        public Plan SelectPlanByPlanid(int planid)
+        {
+            Plan plan = new Plan();
+            string commands = $@"SELECT * FROM plans WHERE planid = {planid}";
+
+            SqlDataAdapter dap = new SqlDataAdapter(commands, con);
+            DataTable dt = new DataTable();
+            dap.Fill(dt);
+
+            foreach (DataRow d in dt.Rows)
+            {
+                plan.title = d["title"].ToString();
+                plan.contents = d["contents"].ToString();
+                plan.subject = d["subject"].ToString();
+                DateTime startDate, endDate;
+                DateTime.TryParse(d["startDate"].ToString(), out startDate);
+                DateTime.TryParse(d["endDate"].ToString(), out endDate);
+                plan.startDate = startDate;
+                plan.endDate = endDate;
+            }
+            return plan;
+        }
+       
         public void AddPlan(Plan plan)
         {
             using (SqlCommand command = new SqlCommand())
@@ -42,7 +66,7 @@ namespace Planner_Test.DBControl
                 command.Parameters.AddWithValue("@title",plan.title);
                 command.Parameters.AddWithValue("@subject", plan.subject);
                 command.Parameters.AddWithValue("@contents", plan.contents);
-                Console.WriteLine(plan.startDate);
+                //Console.WriteLine(plan.startDate);
                 command.Parameters.AddWithValue("@startDate", plan.startDate.ToString("yyyy-MM-dd hh:mm:ss"));
                 command.Parameters.AddWithValue("@endDate", plan.endDate.ToString("yyyy-MM-dd hh:mm:ss"));
                 command.Parameters.AddWithValue("@userId", user.Userid);
@@ -62,10 +86,6 @@ namespace Planner_Test.DBControl
                     con.Close();
                 }
             }
-            /*string commands = "INSERT INTO plans ('title','subject','contents','startDate','endDate')"
-                + "('" + plan.title + "','" + plan.subject + "','" + plan.contents + "','" + plan.startDate.ToString("yyyy-MM-dd hh:mm:ss") + "','" + plan.endDate.ToString("yyyy-MM-dd hh:mm:ss") + "')";
-                */
-
         }
 
         public void dropPlan(Plan plan)
@@ -92,7 +112,38 @@ namespace Planner_Test.DBControl
                 }
             }
         }
-        
+
+        public void editPlan(Plan plan)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = con;            // <== lacking
+                command.CommandType = CommandType.Text;
+                command.CommandText = "UPDATE plans SET title = @title , subject = @subject , contents = @contents, startDate = @startDate , endDate = @endDate " +
+                                    "WHERE planid = @planid";
+                command.Parameters.AddWithValue("@title",plan.title );
+                command.Parameters.AddWithValue("@subject", plan.subject);
+                command.Parameters.AddWithValue("@contents", plan.contents);
+                command.Parameters.AddWithValue("@startDate", plan.startDate.ToString("yyyy-MM-dd hh:mm:ss"));
+                command.Parameters.AddWithValue("@endDate", plan.endDate.ToString("yyyy-MM-dd hh:mm:ss"));
+                command.Parameters.AddWithValue("@planid", plan.planID);
+                try
+                {
+                    con.Open();
+                    int recordsAffected = command.ExecuteNonQuery();
+                }
+                catch (SqlException e)
+                {
+                    Console.WriteLine(e.ToString());
+                    Console.WriteLine(command.CommandText);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
     }
 
 }

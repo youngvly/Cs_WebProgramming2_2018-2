@@ -8,19 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Planner_Test.domain;
+using Planner_Test.DBControl;
 
 namespace Planner_Test
 {
+    
     public partial class monthControl : UserControl
     {
         int year = int.Parse(DateTime.Now.ToString("yyyy"));
         int month = int.Parse(DateTime.Now.ToString("MM"));
         int day = int.Parse(DateTime.Now.ToString("dd"));
         int startDateindex = 0;
+        MakeConnection connection;
+        Users user = new Users();
 
-        public monthControl()
+        public monthControl(Users u)
         {
             InitializeComponent();
+            connection = new MakeConnection(u);
+            user = u;
             drawdate();
             drawPlan();
         }
@@ -78,7 +85,7 @@ namespace Planner_Test
         }
         private void drawPlan()
         {
-            Label[] planList = new Label[]
+             Label[] planList = new Label[]
             {
                 p00,p01,p02,p03,p04,p05,p06,
                 p10,p11,p12,p13,p14,p15,p16,
@@ -91,22 +98,31 @@ namespace Planner_Test
             {
                 d.Text = "";
             }
-            string commands = "SELECT 'title', 'contents','subject','startDate','endDate' FROM plans WHERE  userid = '" + int.Parse(Hello.logined.Userid.ToString())+ "' AND Month(startDate) ='" + month + "'";
-            string connetionString = "Data Source=Young;Initial Catalog=plan_db;Integrated Security=True";
 
-            Console.WriteLine(int.Parse(Hello.logined.Userid.ToString()));
-            SqlConnection con = new SqlConnection(connetionString);
-            SqlDataAdapter dap = new SqlDataAdapter(commands, con);
-            DataTable dt = new DataTable();
-            dap.Fill(dt);
-
+            DataTable dt = connection.SelectPlanByMonth(month);
             foreach (DataRow plan in dt.Rows)
             {
                 string title = plan["title"].ToString();
                 string contents = plan["contents"].ToString();
-                DateTime startDate;
+                DateTime startDate,endDate;
                 DateTime.TryParse( plan["startDate"].ToString(),out startDate);
-                planList[startDateindex + int.Parse(startDate.ToString("dd")) - 1].Text = title;
+                DateTime.TryParse( plan["endDate"].ToString(),out endDate);
+                for (int day = int.Parse(startDate.ToString("dd")) ;
+                        day<= int.Parse(endDate.ToString("dd"));
+                        day++)
+                {
+                    if (planList[startDateindex + day - 1].Text.Length == 0)
+                    {
+                        planList[startDateindex + day - 1].Text = title;
+                        planList[startDateindex + day - 1].Tag = plan["planid"].ToString();
+                    }
+                    else
+                    {
+                        planList[startDateindex + day - 1].Text += "\n" + title;
+                        planList[startDateindex + day - 1].Tag += "/" +  plan["planid"].ToString() ;
+                    }
+
+                }
             }
         }
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -129,7 +145,51 @@ namespace Planner_Test
             drawPlan();
 
         }
+
+        private void addPlanButton_Click(object sender, EventArgs e)
+        {
+            PlanForm planform = new PlanForm(user);
+            planform.Show();
+        }
+        private void plan_Click (object sender, EventArgs e)
+        {
+            Label[] planList = new Label[]
+            {
+                p00,p01,p02,p03,p04,p05,p06,
+                p10,p11,p12,p13,p14,p15,p16,
+                p20,p21,p22,p23,p24,p25,p26,
+                p30,p31,p32,p33,p34,p35,p36,
+                p40,p41,p42,p43,p44,p45,p46
+            };
+            Label selectedLabel = planList.FirstOrDefault(plans => sender.Equals(plans));
+            //Console.WriteLine(selectedLabel.Text);
+
+            string[] planidList_str;
+            if (selectedLabel.Tag == null)
+            {
+                MessageBox.Show("일정이 없습니다.");
+                return;
+            }
+            else if (selectedLabel.Tag.ToString().Contains('/'))
+                planidList_str = selectedLabel.Tag.ToString().Split('/');
+            else
+                planidList_str = new string[] { selectedLabel.Tag.ToString() };
+            int[] planidList = new int[planidList_str.Length];
+            int i = 0;
+            foreach(var p in planidList_str)
+            {
+                if (p.Length == 0) continue;
+                planidList[i++] = int.Parse(p);
+            }
+            PlanShow planshow = new PlanShow(user,planidList);
+            planshow.Show();
+        }
     }
+
+
+
+    
+
     public class GetCalender
     {
         public string[] str_day = new string[] { "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};

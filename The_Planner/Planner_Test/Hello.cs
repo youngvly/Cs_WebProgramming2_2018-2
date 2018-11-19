@@ -21,7 +21,7 @@ namespace Planner_Test
         }*/
         public Hello(Users user)
         {
-            InitializeComponent();
+            InitializeComponent(user);
             if (user.Userid > 0)
             {
                 logined.Id = user.Id;

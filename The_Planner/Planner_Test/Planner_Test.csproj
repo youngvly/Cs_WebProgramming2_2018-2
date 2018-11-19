@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Callender.cs" />
+    <Compile Include="DBControl\MakeConnection.cs" />
     <Compile Include="domain\Plan.cs" />
     <Compile Include="domain\Users.cs" />
     <Compile Include="Hello.cs">
@@ -73,6 +74,12 @@
     <Compile Include="monthControl.Designer.cs">
       <DependentUpon>monthControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanForm.Designer.cs">
+      <DependentUpon>PlanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="plan_dbDataSet.cs">
       <DependentUpon>plan_dbDataSet.xsd</DependentUpon>
     </Compile>
@@ -88,6 +95,12 @@
     </Compile>
     <Compile Include="MainUserControl.Designer.cs">
       <DependentUpon>MainUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanShow.Designer.cs">
+      <DependentUpon>PlanShow.cs</DependentUpon>
     </Compile>
     <Compile Include="signupControls.cs">
       <SubType>UserControl</SubType>
@@ -112,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="monthControl.resx">
       <DependentUpon>monthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanForm.resx">
+      <DependentUpon>PlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanShow.resx">
+      <DependentUpon>PlanShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

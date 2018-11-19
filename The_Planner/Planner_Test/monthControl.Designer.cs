@@ -110,6 +110,7 @@
             this.p46 = new System.Windows.Forms.Label();
             this.p45 = new System.Windows.Forms.Label();
             this.p44 = new System.Windows.Forms.Label();
+            this.addPlanButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -546,6 +547,7 @@
             this.p36.TabIndex = 68;
             this.p36.Text = "월";
             this.p36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p36.Click += new System.EventHandler(this.plan_Click);
             // 
             // p35
             // 
@@ -558,6 +560,7 @@
             this.p35.TabIndex = 67;
             this.p35.Text = "월";
             this.p35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p35.Click += new System.EventHandler(this.plan_Click);
             // 
             // p34
             // 
@@ -570,6 +573,7 @@
             this.p34.TabIndex = 66;
             this.p34.Text = "월";
             this.p34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p34.Click += new System.EventHandler(this.plan_Click);
             // 
             // p33
             // 
@@ -582,6 +586,7 @@
             this.p33.TabIndex = 65;
             this.p33.Text = "월";
             this.p33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p33.Click += new System.EventHandler(this.plan_Click);
             // 
             // p32
             // 
@@ -594,6 +599,7 @@
             this.p32.TabIndex = 64;
             this.p32.Text = "월";
             this.p32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p32.Click += new System.EventHandler(this.plan_Click);
             // 
             // p31
             // 
@@ -606,6 +612,7 @@
             this.p31.TabIndex = 63;
             this.p31.Text = "월";
             this.p31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p31.Click += new System.EventHandler(this.plan_Click);
             // 
             // p30
             // 
@@ -618,6 +625,7 @@
             this.p30.TabIndex = 62;
             this.p30.Text = "월";
             this.p30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p30.Click += new System.EventHandler(this.plan_Click);
             // 
             // l36
             // 
@@ -716,6 +724,7 @@
             this.p26.TabIndex = 54;
             this.p26.Text = "월";
             this.p26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p26.Click += new System.EventHandler(this.plan_Click);
             // 
             // p25
             // 
@@ -728,6 +737,7 @@
             this.p25.TabIndex = 53;
             this.p25.Text = "월";
             this.p25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p25.Click += new System.EventHandler(this.plan_Click);
             // 
             // p24
             // 
@@ -740,6 +750,7 @@
             this.p24.TabIndex = 52;
             this.p24.Text = "월";
             this.p24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p24.Click += new System.EventHandler(this.plan_Click);
             // 
             // p23
             // 
@@ -752,6 +763,7 @@
             this.p23.TabIndex = 51;
             this.p23.Text = "월";
             this.p23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p23.Click += new System.EventHandler(this.plan_Click);
             // 
             // p22
             // 
@@ -764,6 +776,7 @@
             this.p22.TabIndex = 50;
             this.p22.Text = "월";
             this.p22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p22.Click += new System.EventHandler(this.plan_Click);
             // 
             // p21
             // 
@@ -776,6 +789,7 @@
             this.p21.TabIndex = 49;
             this.p21.Text = "월";
             this.p21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p21.Click += new System.EventHandler(this.plan_Click);
             // 
             // p20
             // 
@@ -788,6 +802,7 @@
             this.p20.TabIndex = 48;
             this.p20.Text = "월";
             this.p20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p20.Click += new System.EventHandler(this.plan_Click);
             // 
             // l26
             // 
@@ -886,6 +901,7 @@
             this.p16.TabIndex = 40;
             this.p16.Text = "월";
             this.p16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p16.Click += new System.EventHandler(this.plan_Click);
             // 
             // p15
             // 
@@ -898,6 +914,7 @@
             this.p15.TabIndex = 39;
             this.p15.Text = "월";
             this.p15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p15.Click += new System.EventHandler(this.plan_Click);
             // 
             // p14
             // 
@@ -910,6 +927,7 @@
             this.p14.TabIndex = 38;
             this.p14.Text = "월";
             this.p14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p14.Click += new System.EventHandler(this.plan_Click);
             // 
             // p13
             // 
@@ -922,6 +940,7 @@
             this.p13.TabIndex = 37;
             this.p13.Text = "월";
             this.p13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p13.Click += new System.EventHandler(this.plan_Click);
             // 
             // p12
             // 
@@ -934,6 +953,7 @@
             this.p12.TabIndex = 36;
             this.p12.Text = "월";
             this.p12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p12.Click += new System.EventHandler(this.plan_Click);
             // 
             // p11
             // 
@@ -946,6 +966,7 @@
             this.p11.TabIndex = 35;
             this.p11.Text = "월";
             this.p11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p11.Click += new System.EventHandler(this.plan_Click);
             // 
             // p10
             // 
@@ -958,6 +979,7 @@
             this.p10.TabIndex = 34;
             this.p10.Text = "월";
             this.p10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p10.Click += new System.EventHandler(this.plan_Click);
             // 
             // l16
             // 
@@ -1031,6 +1053,7 @@
             this.p06.TabIndex = 28;
             this.p06.Text = "월";
             this.p06.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p06.Click += new System.EventHandler(this.plan_Click);
             // 
             // p05
             // 
@@ -1043,6 +1066,7 @@
             this.p05.TabIndex = 27;
             this.p05.Text = "월";
             this.p05.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p05.Click += new System.EventHandler(this.plan_Click);
             // 
             // p04
             // 
@@ -1055,6 +1079,7 @@
             this.p04.TabIndex = 26;
             this.p04.Text = "월";
             this.p04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p04.Click += new System.EventHandler(this.plan_Click);
             // 
             // p03
             // 
@@ -1067,6 +1092,7 @@
             this.p03.TabIndex = 25;
             this.p03.Text = "월";
             this.p03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p03.Click += new System.EventHandler(this.plan_Click);
             // 
             // p02
             // 
@@ -1079,6 +1105,7 @@
             this.p02.TabIndex = 24;
             this.p02.Text = "월";
             this.p02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p02.Click += new System.EventHandler(this.plan_Click);
             // 
             // p01
             // 
@@ -1091,6 +1118,7 @@
             this.p01.TabIndex = 23;
             this.p01.Text = "월";
             this.p01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p01.Click += new System.EventHandler(this.plan_Click);
             // 
             // p00
             // 
@@ -1103,6 +1131,7 @@
             this.p00.TabIndex = 22;
             this.p00.Text = "월";
             this.p00.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p00.Click += new System.EventHandler(this.plan_Click);
             // 
             // l11
             // 
@@ -1127,6 +1156,7 @@
             this.p42.TabIndex = 21;
             this.p42.Text = "월";
             this.p42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p42.Click += new System.EventHandler(this.plan_Click);
             // 
             // p41
             // 
@@ -1139,6 +1169,7 @@
             this.p41.TabIndex = 20;
             this.p41.Text = "월";
             this.p41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p41.Click += new System.EventHandler(this.plan_Click);
             // 
             // p40
             // 
@@ -1151,6 +1182,7 @@
             this.p40.TabIndex = 19;
             this.p40.Text = "월";
             this.p40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p40.Click += new System.EventHandler(this.plan_Click);
             // 
             // p43
             // 
@@ -1163,6 +1195,7 @@
             this.p43.TabIndex = 18;
             this.p43.Text = "월";
             this.p43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p43.Click += new System.EventHandler(this.plan_Click);
             // 
             // p46
             // 
@@ -1175,6 +1208,7 @@
             this.p46.TabIndex = 17;
             this.p46.Text = "월";
             this.p46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p46.Click += new System.EventHandler(this.plan_Click);
             // 
             // p45
             // 
@@ -1187,6 +1221,7 @@
             this.p45.TabIndex = 16;
             this.p45.Text = "월";
             this.p45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p45.Click += new System.EventHandler(this.plan_Click);
             // 
             // p44
             // 
@@ -1199,12 +1234,27 @@
             this.p44.TabIndex = 15;
             this.p44.Text = "월";
             this.p44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p44.Click += new System.EventHandler(this.plan_Click);
+            // 
+            // addPlanButton
+            // 
+            this.addPlanButton.FlatAppearance.BorderSize = 0;
+            this.addPlanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPlanButton.Image = global::Planner_Test.Properties.Resources.noun_add_1498447_사본;
+            this.addPlanButton.Location = new System.Drawing.Point(364, 650);
+            this.addPlanButton.Name = "addPlanButton";
+            this.addPlanButton.Size = new System.Drawing.Size(49, 41);
+            this.addPlanButton.TabIndex = 6;
+            this.addPlanButton.UseVisualStyleBackColor = true;
+            this.addPlanButton.UseWaitCursor = true;
+            this.addPlanButton.Click += new System.EventHandler(this.addPlanButton_Click);
             // 
             // monthControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(243)))));
+            this.Controls.Add(this.addPlanButton);
             this.Controls.Add(this.monthAfterButton);
             this.Controls.Add(this.monthBeforeButton);
             this.Controls.Add(this.MonthLabel);
@@ -1303,5 +1353,6 @@
         private System.Windows.Forms.Label l33;
         private System.Windows.Forms.Label l32;
         private System.Windows.Forms.Label l31;
+        private System.Windows.Forms.Button addPlanButton;
     }
 }
