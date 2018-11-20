@@ -1,6 +1,6 @@
 # Term Project Idea
 
-## 일정관리 프로그램
+## 일정관리 프로그램 Planer_Test
 
 <b>1. 주요기능</b>
 <ul>
@@ -59,3 +59,7 @@ Make Appointment
 </ul>
 
 </div>
+
+
+# Example1
+RestAPI 실습 코드
